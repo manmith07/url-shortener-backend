@@ -29,7 +29,7 @@ func CreateShortURL(c *gin.Context) {
 		return
 	}
         host := c.Request.Host
-        shortURL := "http://" + host + "/" + code
+        shortURL := "https://" + host + "/" + code
         c.JSON(200, gin.H{
     	   "short_url": shortURL,
         })
