@@ -28,11 +28,12 @@ func CreateShortURL(c *gin.Context) {
 		c.JSON(500, gin.H{"error": "DB error"})
 		return
 	}
-
-	c.JSON(200, gin.H{
-		"short_url": "http://localhost:8080/" + code,
-	})
-}
+        host := c.Request.Host
+        shortURL := "http://" + host + "/" + code
+        c.JSON(200, gin.H{
+    	   "short_url": shortURL,
+        })
+} 
 
 func RedirectURL(c *gin.Context) {
 	code := c.Param("code")
