@@ -1,9 +1,8 @@
-module url-shortener
+module github.com/manmithsm/url-shortener
 
 go 1.26
 
 require (
-	github.com/gin-contrib/cors v1.7.7
 	github.com/gin-gonic/gin v1.12.0
 	github.com/lib/pq v1.12.0
 )
